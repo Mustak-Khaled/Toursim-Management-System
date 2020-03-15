@@ -1,1 +1,1 @@
-Testing my folder on git
+deletion done
