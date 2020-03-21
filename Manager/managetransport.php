@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/createhotel.css">
+        <link rel="stylesheet" type="text/css" href="css/managetransport.css">
     </head>
     <body>
        
@@ -17,7 +17,7 @@
                     <button class="btn" onClick="location.href='createtransport.php'" value='createtransport'><i class="fa fa-plane">&nbsp;&nbsp;&nbsp;Create Transport</i></button><br>
                     <button class="btn" onClick="location.href='managetransport.php'" value='managetransport'><i class="fa fa-plane">&nbsp;&nbsp;&nbsp;Manage Transport</i></button><br>
                     <button class="btn" onClick="location.href='createhotel.php'" value='createhotel'><i class="fa fa-plane">&nbsp;&nbsp;&nbsp;Create Hotel</i></button><br>
-                    <button class="btn" onClick="location.href='managehotel.php'" value='managehotel'> <i class="fa fa-plane">&nbsp;&nbsp;&nbsp;Manage Hotel</i></button><br>
+                    <button class="btn" onClick="location.href='managehotel.php'" value='managehotel'><i class="fa fa-plane">&nbsp;&nbsp;&nbsp;Manage Hotel</i></button><br>
                     <button class="btn" onClick="location.href='webinfoediting.php'" value='webinfoediting'><i class="fa fa-user-circle">&nbsp;&nbsp;&nbsp;Website Info Editing</i></button><br>
                     <button class="btn" onClick="location.href='manageissue.php'" value='manageissue' ><i class="fa fa-comments">&nbsp;&nbsp;&nbsp;Manage Issues</i></button><br>
                     <button class="btn" onClick="location.href='managebill.php'" value='managebill'><i class="fa fa-comments">&nbsp;&nbsp;&nbsp;Manage Bills</i></button><br>
@@ -31,57 +31,32 @@
         <div class="welcome" ><i class="fa fa-user">&nbsp;&nbsp;&nbsp;WELCOME XYZ</i>
 
         </div>
-        <div class="text" >Create Hotel</i>
+        <div class="text" >Manage Transport</i>
         </div>
 
         <div class="panel">
-            <table  > 
-                <tr>
-                    <td> <h3>Hotel Name:</h3></td>
-                    
-                    <td><h3><input type="text" name="Hname" placeholder="Hotel name" ></h3></td>
-                 
+        
+            <table>
+  <tr>
+  <th>ID</th>
+  <th>NAME</th>
+  <th>NUMBER OF SEAT</th>
+  <th>PRICE PER SEAT</th>
+  <th>DETAILS</th>
+  <th>ACTIONS</th>
+  </tr>
+  <tr>
+  <td>TR_1</td>
+  <td>SOUDIA</td>
+  <td>100</td>
+  <td>$200</td>
+  <td>LUXARIOUS AND COMFORT </td>
+  <td><input type="button" name="action" value="view details" style="color:green"onClick="location.href='updatepackage.php'" value='updatepackage' ></td>
+</tr>
 
-                </tr>
-
-                <tr>
-                    <td> <h3>Seat No:</h3></td>
-                    
-                    <td style="text-align='right'"><h3><input type="text" name="seatno" placeholder="Number of Seat" ></h3></td>
-                 
-
-                </tr>
-
-                <tr>
-                    <td> <h3>Price Per Seat:</h3></td>
-                    
-                    <td style="text-align='right'"><h3><input type="text" name="price" placeholder="Price per Seat" ></h3></td>
-                 
-
-                </tr>
-
-                <tr>
-                    <td> <h3>Ref No.</h3></td>
-                    
-                    <td style="text-align='right'"><h3><input type="text" name="ref" placeholder="Ref No." ></h3></td>
-                 
-
-                </tr>
-
-
-                <tr>
-                    <td> <h3>Details.</h3></td>
-                    
-                    <td style="text-align='right'"><h3><input type="text" name="details" placeholder="Detais." ></h3></td>
-                 
-                </tr>    
-
-            </table>
-
-            <h3><input type="submit" name="submit" value="Submit"> <input type="button" name="reset" value="Reset"></h3>
-
-        </div>
-
+  
+        </table>
+    </div>
         
     </body>
 </html>
