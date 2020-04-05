@@ -85,9 +85,9 @@
                 </tr>
 
                 <tr>
-                    <td> <h3>Passport No.:</h3></td>
+                    <td> <h3>Passport No:</h3></td>
                     
-                    <td><h3><input type="text" name="salary" placeholder="salary" ></h3></td>
+                    <td><h3><input type="text" name="passport no" placeholder="Passport No" ></h3></td>
                  
 
                 </tr>
