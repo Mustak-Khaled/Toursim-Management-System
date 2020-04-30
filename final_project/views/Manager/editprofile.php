@@ -190,7 +190,7 @@ include '../../controllers/employeeController.php';
                     
                     <td style><h3><input type="text" name="email" value="<?php echo $emp["email"]?>"></h3></td>
                     <td><span style="color:red"><?php echo $err_email;?></span></td>
-                 
+
 
                 </tr>
 
@@ -239,7 +239,6 @@ include '../../controllers/employeeController.php';
                 </tr>
 
 
-                
 
 
             </table>

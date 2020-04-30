@@ -145,9 +145,6 @@
 
             <input type="button" id="t4" style="background-color:rgb(255, 51, 153)"> 
             <input type="button" id="t5" style="background-color:rgb(0, 230, 230);margin-left: 60px">
-    
-
-            
            
         </div>
 
