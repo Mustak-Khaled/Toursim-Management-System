@@ -1,5 +1,6 @@
 <?php
-	include '../controllers/loginController.php';
+  include '../controllers/loginController.php';
+  
     
     $uid="";
     $err_uname="";
