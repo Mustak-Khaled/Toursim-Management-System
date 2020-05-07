@@ -1,29 +1,28 @@
 <?php 
       require_once ('../../controllers/bookingController.php');  
-      require_once ('../../controllers/billController.php');    
-      require_once ('../../controllers/hotelController.php');    
+      require_once ('../../controllers/reviewController.php');  
+
 
   
-      $days="";
-      $err_days="";
-     
+      $comment="";
+      $err_comment="";
       $has_error=false;  
 
     if(isset($_POST['submit']))
     {
         
 
-        if(empty($_POST['days']))
+        if(empty($_POST['comment']))
             {
-                $err_days="*Days Required";
-                $has_error=true;  
+                $err_comment="*Comment Required";
             }
             else
             {			
-                $days=htmlspecialchars($_POST['days']);
+                $comment=htmlspecialchars($_POST['comment']);
                     
             }
-          
+    
+        
 
         session_start();
         if(!isset($_SESSION['loggedinuser']))
@@ -31,60 +30,35 @@
             header("Location:../login.php");
         }
 
-        
         $c_id = $_SESSION["loggedinuser"];
-        
-        $x=rand(1,10000000);
-        $b_id="B-".$x;
-        $pht_id=$_GET["id"]; 
+        $b_id=$_GET["id"]; 
 
-        
-
-        
-        
         $y=rand(1,10000000);
-        $bl_id="Bl-".$y;
+        $r_id="R-".$y;
+    
         
-        $hotel=getHotel($pht_id);
-
-        $total_room=$hotel["room_no"];
-        $count=$hotel["count"];
+    
         
-        $days=$_POST['days'];
-
-        (int)$amount=(int)$hotel["price"]*(int)$days;
-
-        $capacity = $total_room - $count;
-        
-        if((!$has_error) && ($capacity>0))
+        $comment=$_POST['comment'];
+        if($comment!="")
         {
-            insertBooking($b_id, $pht_id, 'active', $c_id);  
-            insertBill($bl_id, 'active', 'unpaid', $amount, $c_id, $b_id);
-
-            (int)$count++;
-
-            updateCountHotel($pht_id,$count);
-            header("Location:../User/home.php");
-        }
-        else
-        {
-            echo '<script>alert("Something Went wrong!")</script>';
+            insertReview($r_id,$comment,'active',$c_id,$b_id);
         }
         
-
        
     }
     if(isset($_POST['back']))
     {
-        header("Location:hotel.php");
+        header("Location:profile.php");
        
     }
 ?>
 <html>
     <head>
-        <title>Hotel Booking</title>
+        <title>Booking Review</title>
         <link rel="stylesheet" type="text/css" href="Css/home.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
         <style>
             .mySlides {display:none;}
@@ -113,18 +87,17 @@
     <body class="bg">
 
         <div style="position:absolute; top: 100px; left: 30px;">
-            <font size="60"><h1>Are You Sure Want To Book This Hotel?</h1><hr> </font>
+            <font size="60"><h1>Place Your Valuable Review/Experience</h1><hr> </font>
         </div>
         
         <form action="" method="post">
             <table border="1" style="position:absolute; top: 300px; left: 130px; width:150">
                 <tbody>
                     <tr>
-                        <td>Number Of Days:</td>
-                        <td><input type="text" name="days" placeholder="how many days?"></td>
-                        <td><span style="color:red"><?php echo $err_days;?></span></td>
+                        <td>Put Your Review:</td>
+                        <td><input type="text" name="comment" placeholder="Write Here" style="height:200; width:300;"></td>
+                        <td><span style="color:red"><?php echo $err_comment;?></span></td>
                     </tr>
-                    
                     <tr>
                         <td></td>
                     </tr>
@@ -150,4 +123,3 @@
           </div>
     </body>
 </html>
-

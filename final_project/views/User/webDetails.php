@@ -1,6 +1,17 @@
+<?php 
+      require_once ('../../controllers/web_infoController.php');
+
+	  
+	  $w_id = $_GET["id"];
+	  $info=getInfo($w_id);
+    
+       
+	 
+
+?>
 <html>
     <head>
-        <title>About</title>
+        <title>Details Information</title>
         <link rel="stylesheet" type="text/css" href="Css/home.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -17,6 +28,15 @@
             background-repeat: no-repeat;
             background-size: cover;
             }
+            .footer {
+                position: absolute;;
+                left: 0;
+                top: 1250px;
+                width: 100%;
+                background-color: rgb(35, 35, 119);
+                color: rgb(216, 205, 205);
+                
+            }
         </style>
     </head>
     <body class="bg">
@@ -32,17 +52,24 @@
           </ul>
 
         <div style="position:absolute; top: 100px; left: 30px;">
-            <font size="60"><h1>About Us</h1><hr> </font>
+            <font size="60"><h1><?php echo $info["name"];?></h1><hr> </font>
         </div>
         <div style="position:absolute; top: 240px; left: 30px;">
-            <font><h1 style="font-size: x-large; color: azure;">We are passionate about travel and sharing the world's wonders
-                 on the leisure travel side, and 
-                 <br>providing corporate 
-                 travelers hi-touch services to 
-                 facilitate their business travel needs. We're an
-                 <br>employee-owned travel agency anchored 
-                 by our values, integrity and dedication to customer service.</h1> </font>
+            <font><h1 style="font-size: x-large; color: azure;"><?php echo $info["details"];?></h1> </font>
+        </div>
+        <div style="position:absolute; top: 240px; left: 830px;">
+            <img height="300" width="400" src="<?php echo $info["image"];?>"></img>
         </div>
         
+        <div class="footer">
+            <p style="position: absolute;">Hot Line : +88012345678 <br>
+               Facebook : www.facebook.com/tourism_bd <br>
+               fax : 026666
+            </p>
+            <p align="right">Powered by :Tour Management <br>
+               www.tourism.com <br>
+               +8809612345  
+            </p>
+          </div>
     </body>
 </html>

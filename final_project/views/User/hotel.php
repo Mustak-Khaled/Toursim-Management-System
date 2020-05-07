@@ -33,7 +33,26 @@
                 
             }    
         </style>
+                                                        
+        <script>                                      
+            function search()
+            {
+              http = new XMLHttpRequest();
+              var search_word=document.getElementById("search_input").value;
+              http.onreadystatechange=function()
+              {
+                if(http.readyState == 4 && http.status == 200)
+                {
+                  document.getElementById("search_result").innerHTML=http.responseText;
+                }
+              }
+              http.open("GET","search.php?key="+search_word,true);
+              http.send();
+            }
+          </script>
 
+
+          
     </head>
     <body class="bg">
     <?php
@@ -46,27 +65,6 @@
        
         $lHotels=getAllHotel();
 
-       if(isset($_POST['submit']))
-            {
-              if(empty($_POST['location']))
-                {
-                    $err_location="*location Required";
-                }
-                else
-                {			
-                    $location=htmlspecialchars($_POST['location']);
-                }
-
-                if($location!="")
-		            {
-                    $location=$_POST['location'];
-
-                    $hotels = searchHotel($location);
-                }
-                else
-                  echo '<script>alert("Something went wrong!")</script>';
-                
-              }
       
       ?>
       <ul class="active">
@@ -77,7 +75,6 @@
             <li><a href="Transport.php">Transprot</a></li>
             <li><a href="contact.php">Contact</a></li>
             <li><a href="about.php">About</a></li>
-            <li><a href="#contact"><input type="text"><input type="button" value="search"></a></li>
             <li><a href="profile.php">Login/Signup</a></li>
       </ul>
       
@@ -114,7 +111,7 @@
                 <tr>
                     <td>Choose Location: </td>
                     <td>
-                        <select name="location">
+                        <select id="search_input" onchange="search()">
                           <option></option>
                           <?php
                                     
@@ -123,7 +120,10 @@
                                               echo '<option value="'.$lHotel['location'].'">'.$lHotel['location'].'<option>';
                                           }
 
+                                          
+
                           ?>
+                          
                         </select>  
                     </td>
                 </tr>
@@ -133,7 +133,7 @@
                     <td><span style="color:red"><?php echo $err_location;?></span></td>
                 </tr>
                 <tr>
-                  <td colspan="2" align="center"><input type="submit" name="submit" value="Search"></td>
+                  
                 </tr>
               </tbody>
             </table>
@@ -150,22 +150,8 @@
                           <td>Count</td>
                           <td><--Choose--></td>
                         </tr>
-                        <?php
-                            foreach($hotels as $hotel)
-                            {
-                                echo "<tr>";
-                                echo "<td>".$hotel["h_id"]."</td>";
-                                echo "<td>".$hotel["status"]."</td>";
-                                echo "<td>".$hotel["ref"]."</td>";
-                                echo "<td>$".$hotel["price"]."</td>";
-                                echo "<td>".$hotel["room_no"]."</td>";
-                                echo "<td>".$hotel["details"]."</td>";
-                                echo "<td>".$hotel["location"]."</td>";
-                                echo "<td>".$hotel["count"]."</td>";
-                                echo '<td><a href="bookHotel.php?id='.$hotel["h_id"].'" >Select</a>';
-                                echo "</tr>";
-                            }
-                        ?>
+                        <tr id="search_result">
+                        </tr>
                         
                   </tbody>
             </table>
