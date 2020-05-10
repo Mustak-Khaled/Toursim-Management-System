@@ -6,8 +6,6 @@
 	  $info=getInfo($w_id);
     
        
-
-
       
 
 ?>
