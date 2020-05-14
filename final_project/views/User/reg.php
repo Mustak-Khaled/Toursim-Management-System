@@ -217,6 +217,12 @@
 
 
             }
+
+            if(isset($_POST['cancel']))
+    {
+                header("Location:home.php");
+       
+    }
         ?>
         
         <h2>User Registration</h2>
@@ -349,6 +355,10 @@
                         <td colspan="2">
                             <input type="submit" name="submit" value="Submit" style="width: 100;">
                         </td>
+                        <td colspan="2">
+                            <input type="submit" name="cancel" value="cancel" style="width: 100;">
+                        </td>
+                        
                         
                         
                     </tr>

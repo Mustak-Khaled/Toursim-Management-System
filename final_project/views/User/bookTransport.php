@@ -59,11 +59,11 @@
             (int)$count+=$seat;
 
             updateCount($pht_id,$count);
-            header("Location:../User/home.php");
+            header("Location:profile.php");
         }
         else
         {
-            echo '<script>alert("Seat Full")</script>';
+            echo '<script>alert("Something Went Wrong!")</script>';
         }
        
     }

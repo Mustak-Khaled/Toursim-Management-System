@@ -64,7 +64,7 @@
             (int)$count++;
 
             updateCountHotel($pht_id,$count);
-            header("Location:../User/home.php");
+            header("Location:profile.php");
         }
         else
         {
