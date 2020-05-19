@@ -222,7 +222,7 @@
 
             </table>
 
-            <h3><input type="submit" name="submit" value="update">  <input type="submit" name="delete" value="delete" style="background-color:red;"></h3>
+            <h3><input type="submit" name="submit" value="update" style="margin-left:80px;">  <input type="button" name="delete" value="delete" style="background-color:red;"></h3>
     </div>
     </form>
 
