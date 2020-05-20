@@ -358,18 +358,18 @@ function validate()
                 </tr>
 
                 <tr>
-                    <td> <h3>No. of Seat:</h3></td>
+                    <td> <h3>No. of Room:</h3></td>
                     
-                    <td style="text-align='right'"><h3><input type="text" id="t3" name="seatno" placeholder="Number of Seat" ></h3></td>
+                    <td style="text-align='right'"><h3><input type="text" id="t3" name="seatno" placeholder="Number of Room" ></h3></td>
                     <td> <span id="na2" style="color:red"></td>
                  
 
                 </tr>
 
                 <tr>
-                    <td> <h3>Price Per Seat:</h3></td>
+                    <td> <h3>Price Per Room:</h3></td>
                     
-                    <td style="text-align='right'"><h3><input type="text" id="t4" name="price" placeholder="Price per Seat" ></h3></td>
+                    <td style="text-align='right'"><h3><input type="text" id="t4" name="price" placeholder="Price per Room" ></h3></td>
                     <td> <span id="na3" style="color:red"></td>
                  
 
