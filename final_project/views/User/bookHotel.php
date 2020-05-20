@@ -4,6 +4,7 @@
       require_once ('../../controllers/hotelController.php');    
 
   
+      
       $days="";
       $err_days="";
      
