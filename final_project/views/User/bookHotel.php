@@ -21,6 +21,11 @@
             else
             {			
                 $days=htmlspecialchars($_POST['days']);
+                if (!preg_match("/^[0-9]+$/",$days)) 
+                    {
+                        $err_days = "Valid Days Required";
+                        $has_error=true;
+                    }
                     
             }
           

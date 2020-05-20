@@ -49,7 +49,7 @@
           </ul>
 
         <div style="position:absolute; top: 100px; left: 30px;">
-            <font size="60"><h1>Thank You For Visiting Us!</h1><hr> </font>
+            <font size="60"><h1>Heartiest Welcome & Gratitude</h1><hr> </font>
         </div>
 
         <div style="position:absolute; top: 300px; left: 380px;">

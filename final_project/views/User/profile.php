@@ -87,6 +87,17 @@
                 
             }
         </style>
+        <script>
+        function printBill(){
+            var printMe = document.getElementById('myBill');
+            var wme = window.open("", "", "width=900, height=700");
+            wme.document.write(printMe.outerHTML);
+            wme.document.close();
+            wme.focus();
+            wme.print();
+            //wme.close();
+        }
+    </script>
     </head>
     <body class="bg">
     <ul class="active">
@@ -264,7 +275,7 @@
             </table>
         </div>
         <form action="" method="post">
-        <div style="position:absolute; top: 750px; left: 550px;"> 
+        <div style="position:absolute; top: 750px; left: 550px;" id="myBill"> 
             <h2>Print Your Ticket to Consume The Service</h2>
             <table border="1">
                 <tbody>
@@ -291,6 +302,9 @@
                         <td>No Of Days</td>
                         <td>Travel Date</td>
                         <td>Seat No.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="create_pdf" value="Create PDF" onclick="printBill()"></td>
                     </tr>
                     <?php                        
 
