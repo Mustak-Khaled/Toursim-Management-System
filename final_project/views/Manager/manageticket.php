@@ -39,7 +39,7 @@ $tcs=getAllTicket();
                 
         </div>
 
-        <div class="welcome" ><i class="fa fa-user">&nbsp;&nbsp;&nbsp;<?php echo "Welcome User Id:".$_SESSION["loggedinuser"];?></i>
+        <div class="welcome" ><i class="fa fa-user">&nbsp;&nbsp;&nbsp;<?php echo "Welcome ".$_SESSION["loggedinuser"];?></i>
 
         </div>
         <div class="text" >Manage Ticket
