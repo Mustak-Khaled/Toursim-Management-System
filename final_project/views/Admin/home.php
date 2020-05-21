@@ -38,6 +38,7 @@
 			http1.open("GET","apply.php",true);
 			http1.send();
           
+		  
 		}
 
         function reviewcount()
