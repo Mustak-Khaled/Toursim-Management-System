@@ -103,7 +103,7 @@
           <p class="p1" id="demo">
             <script>
                 // Set the date we're counting down to
-                var countDownDate = new Date("November 22, 2020 15:37:25").getTime();
+                var countDownDate = new Date("May 31, 2020 15:37:25").getTime();
 
                 // Update the count down every 1 second
                 var x = setInterval(function() {
@@ -194,9 +194,9 @@
                   <td>Choose Type:</td>
                   <td><select name="type">
                         <option value=""></option>
-                        <option value="holiday">Holiday</option>
-                        <option value="couple">Couple</option>
-                        <option value="business">Business</option>
+                        <option value="Holiday">Holiday</option>
+                        <option value="Couple trip">Couple</option>
+                        <option value="Bussiness Trip">Business</option>
                        
                     </select></td>
                 </tr>

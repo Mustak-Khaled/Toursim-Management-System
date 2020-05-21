@@ -35,13 +35,16 @@
             <font size="60"><h1>About Us</h1><hr> </font>
         </div>
         <div style="position:absolute; top: 240px; left: 30px;">
-            <font><h1 style="font-size: x-large; color: azure;">We are passionate about travel and sharing the world's wonders
-                 on the leisure travel side, and 
-                 <br>providing corporate 
-                 travelers hi-touch services to 
-                 facilitate their business travel needs. We're an
-                 <br>employee-owned travel agency anchored 
-                 by our values, integrity and dedication to customer service.</h1> </font>
+            <font><h1 style="font-size: x-large; color: azure;">This Project has been created by MD. Mustak Un Nobi,
+                 Fatema Tasnim and Toufique E Elahi for Web Technologies  
+                 <br>for Final Term. This is a demo version where upgradation is possible for future reference. We have tried our best
+                 <br>to create a dynamic, user friendly and standard protocol based Web Page for Tour Industry as because we do realize 
+                 <br>that Toursim is a fast growing field in our country which can help our Socio-Economic life. Thus an optimistic Web Site
+                 <br>is necessarry to achieve the goal. This is our motivation to conduct such kind of project. We hope our little contribution 
+                 <br>will help in this context.
+                 <br><br>We couldn't complete this project without the help of our mentor and honourable faculty Mr. SAZZAD HOSSAIN Sir. 
+                 <br>So a very special Thanks to our mentor. 
+                 <br><br>Thank You Everyone.</h1> </font>
         </div>
         
     </body>
