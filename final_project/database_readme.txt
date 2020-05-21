@@ -133,14 +133,11 @@ cid
 status
 active status
 
-
-
-
-
-
-
-
-
+15.web_info
+w_id
+name
+details
+image
 
 
 
@@ -239,4 +236,5 @@ Normalization
 11.	Booking (b_id, pht_id, c_id, status)
 12.	Bill (bl_id, status, pay_status, c_id, b_id, amount)
 13.	Booktracking (bt_id, b_id, c_id, status, active status)
+
 
