@@ -21,6 +21,7 @@
                     $comment=$_POST['comment'];
 
                     insertIssue($isid, $comment, $c_id);
+                    header("Location:profile.php");
                 
             }
 ?>
@@ -92,6 +93,7 @@
                             document.getElementById( "na" ).innerHTML = error;
                                     
                         }
+
                     else{
                                    
                             error = " Issue can  only be latter and space. ";
@@ -131,7 +133,7 @@
           </ul>
 
         <div style="position:absolute; top: 100px; left: 30px;">
-           <font size="60"><h1>Feel free to contact with us regarding any issue</h1> </font>
+           <font size="60"><h1>Feel Free to Contact Regarding Any Issues</h1> </font>
         </div>  
         <form action="" method="post" onsubmit="return validate();">
             <table style="position:absolute; top: 200; left: 200px;">

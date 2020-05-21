@@ -19,6 +19,11 @@
             else
             {			
                 $seat=htmlspecialchars($_POST['seat']);
+                if (!preg_match("/^[0-9]{2}+$/",$seat)) 
+                    {
+                        $err_seat = "Valid Seat Number Required";
+                        $has_error=true;
+                    }
                     
             }
     
